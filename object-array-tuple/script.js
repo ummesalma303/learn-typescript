@@ -60,3 +60,11 @@ console.log(color);
 // bgColor = [0, 255,  0.5];
 // // headerColor = [0, 255, 255];
 // console.log(bgColor)
+/* ---------------------------------- void ---------------------------------- */
+function log(message) {
+    console.log("messsage");
+}
+log('mmmmmmm');
+var useless = undefined;
+useless = 1; // error
+console.log(useless);
