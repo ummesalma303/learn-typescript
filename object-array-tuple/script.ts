@@ -52,3 +52,36 @@ const pending: boolean = true;
 const notPending = !pending; // false
 console.log(notPending); // false
 
+let employee:object;
+employee={
+    name: 'umme',
+    age: 999
+}
+console.log(employee)
+
+// array
+// let skills:string[] = [];
+// skills[0] = "Problem Solving";
+// skills[1] = "Programming";
+// skills.push('Software Design');
+
+let skills:( string|number)[];
+skills = ['Problem Sovling','Software Design','Programming'];
+skills.push(100)
+console.log(skills.length);
+
+/* ---------------------------------- Array --------------------------------- */
+let color: [number, number, string] = [255, 0, "0"];
+console.log(color)
+
+/* ---------------------------------- tuple --------------------------------- */
+// let bgColor, headerColor: [number, number, number, number?];
+// bgColor = [0, 255, 255, 0.5];
+// headerColor = [0, 255, 255];
+// console.log(bgColor,headerColor)
+
+
+// let bgColor: [number, number, number, number?];
+// bgColor = [0, 255,  0.5];
+// // headerColor = [0, 255, 255];
+// console.log(bgColor)
