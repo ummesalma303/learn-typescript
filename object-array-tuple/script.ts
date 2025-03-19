@@ -36,7 +36,7 @@ function increment(counter:number) : number {
 
 // array
 let items:(number|null)[] = [1, 2, 3, null];
-console.log(items)
+// console.log(items)
 
 // event parameter
 // const button = document.getElementById('btn')
@@ -50,14 +50,14 @@ console.log(items)
 // NOT operator
 const pending: boolean = true;
 const notPending = !pending; // false
-console.log(notPending); // false
+// console.log(notPending); // false
 
 let employee:object;
 employee={
     name: 'umme',
     age: 999
 }
-console.log(employee)
+// console.log(employee)
 
 // array
 // let skills:string[] = [];
@@ -68,11 +68,11 @@ console.log(employee)
 let skills:( string|number)[];
 skills = ['Problem Sovling','Software Design','Programming'];
 skills.push(100)
-console.log(skills.length);
+// console.log(skills.length);
 
 /* ---------------------------------- Array --------------------------------- */
 let color: [number, number, string] = [255, 0, "0"];
-console.log(color)
+// console.log(color)
 
 /* ---------------------------------- tuple --------------------------------- */
 // let bgColor, headerColor: [number, number, number, number?];
@@ -88,12 +88,61 @@ console.log(color)
 
 /* ---------------------------------- void ---------------------------------- */
 function log(message): void {
-    console.log("messsage");
+    // console.log("messsage");
 }
 
 log('mmmmmmm')
 
-let useless: void = undefined;
+// let useless: void = undefined;
 
-useless = 1; // error
-console.log(useless)
+// useless = 1; // error
+// console.log(useless)
+
+
+
+/* ---------------------------------- unknown ---------------------------------- */
+
+// let result: unknown;
+
+// result = 1;
+// result = 'hello';
+// result = false;
+// result = Symbol();
+// result = { name: 'John' };
+// result = [1, 2, 3];
+// console.log(result)
+
+
+
+// let result: unknown;
+// result = [1,2,3];
+
+// const total = result.reduce((a: number, b:number ) => a + b, 0);
+// console.log(total);
+
+
+
+
+const fetchData = async (url: string): Promise<unknown> => {
+    const response = await fetch(url);
+    return await response.json();
+};
+
+const showPosts = async () => {
+    const url = 'https://jsonplaceholder.typicode.com/posts';
+    try {
+        const posts = await fetchData(url); // unknown type
+        
+        (
+            posts as { userId: number; id: number; title: string; body: string }[]
+        ).map((post) => console.log(post.title));
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+showPosts();
+
+/* --------------------- TypeScript String Literal Types -------------------- */
+
+let click: 'click';
