@@ -135,7 +135,9 @@ const showPosts = async () => {
         
         (
             posts as { userId: number; id: number; title: string; body: string }[]
-        ).map((post) => console.log(post.title));
+        ).map((post):void => {
+            // return console.log(post.title)
+        });
     } catch (err) {
         console.log(err);
     }
@@ -146,3 +148,10 @@ showPosts();
 /* --------------------- TypeScript String Literal Types -------------------- */
 
 let click: 'click';
+click = 'click'; 
+console.log(click)
+
+let mouseEvent: 'click' | 'dblclick' | 'mouseup' | 'mousedown';
+mouseEvent = 'click';
+mouseEvent = 'dblclick';
+console.log(mouseEvent)

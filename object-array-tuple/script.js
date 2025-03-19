@@ -142,7 +142,9 @@ var showPosts = function () { return __awaiter(_this, void 0, void 0, function (
                 return [4 /*yield*/, fetchData(url)];
             case 2:
                 posts = _a.sent();
-                posts.map(function (post) { return console.log(post.title); });
+                posts.map(function (post) {
+                    // return console.log(post.title)
+                });
                 return [3 /*break*/, 4];
             case 3:
                 err_1 = _a.sent();
@@ -155,3 +157,9 @@ var showPosts = function () { return __awaiter(_this, void 0, void 0, function (
 showPosts();
 /* --------------------- TypeScript String Literal Types -------------------- */
 var click;
+click = 'click';
+console.log(click);
+var mouseEvent;
+mouseEvent = 'click';
+mouseEvent = 'dblclick';
+console.log(mouseEvent);
