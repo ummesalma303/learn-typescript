@@ -39,3 +39,26 @@ function getStr(...str: string[]): string {
 }
 
 console.log(getStr('apple', ' banana'))
+/* --------------------- TypeScript Function Overloading -------------------- */
+
+// function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+// function add(a: string, b: string, c?: string): string;
+
+
+function add(a: any, b: any, ): any {
+    if (a === 'number' ) {
+        return a + b;
+    } else {
+       
+    }
+    // throw new Error('Invalid arguments');
+//    return a+b+c
+}
+
+// console.log(add(10, 20));  // 30
+console.log(add('number', 'world!'));  // 'Hello, world!
+// console.log(add('Hello, ', 'world!'));  // 'Hello, world!
+
+
+

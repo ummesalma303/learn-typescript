@@ -33,3 +33,16 @@ function getStr() {
     return str.join(',');
 }
 console.log(getStr('apple', ' banana'));
+// function add(a: string, b: string, c?: string): string;
+function add(a, b) {
+    if (a === 'number') {
+        return a + b;
+    }
+    else {
+    }
+    // throw new Error('Invalid arguments');
+    //    return a+b+c
+}
+// console.log(add(10, 20));  // 30
+console.log(add('number', 'world!')); // 'Hello, world!
+// console.log(add('Hello, ', 'world!'));  // 'Hello, world!
