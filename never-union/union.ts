@@ -55,3 +55,53 @@ enum requestData2{
 }
 console.log(requestData2)
 
+
+let mouseEvent: 'click' | 'dblclick' | 'mouseup' | 'mousedown' | 'mouseover';
+mouseEvent = 'click'; // valid
+mouseEvent = 'dblclick'; // valid
+mouseEvent = 'mouseup'; // valid
+mouseEvent = 'mousedown'; // valid
+mouseEvent = 'mouseover'; // compiler error
+
+/* ------------------------- TypeScript Type Aliases ------------------------ */
+
+type alphanumeric = string | number;
+
+let input: alphanumeric;
+input = 100; // valid
+input = 'Hi'; // valid
+// input = false; // Compiler error
+
+// 2) Object types
+
+type person = {
+    name: string;
+    age: number;
+}
+let person1:person = {
+    name: 'John',
+    age: 25
+}
+console.log(person1.name)
+
+// 4) Intersection Types
+
+type Personal = {
+    name: string;
+    age: number;
+  };
+  
+  type Contact = {
+    email: string;
+    phone: string;
+  };
+
+  type Candidate = Personal & Contact
+
+  let candidate : Candidate={
+    name: "Joe",
+    age: 25,
+    email: "joe@example.com",
+    phone: "(408)-123-4567"
+  }
+  console.log(candidate.phone)

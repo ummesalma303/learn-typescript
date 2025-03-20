@@ -43,3 +43,24 @@ var requestData2;
     requestData2["Apr"] = "four";
 })(requestData2 || (requestData2 = {}));
 console.log(requestData2);
+var mouseEvent;
+mouseEvent = 'click'; // valid
+mouseEvent = 'dblclick'; // valid
+mouseEvent = 'mouseup'; // valid
+mouseEvent = 'mousedown'; // valid
+mouseEvent = 'mouseover'; // compiler error
+var input;
+input = 100; // valid
+input = 'Hi'; // valid
+var person1 = {
+    name: 'John',
+    age: 25
+};
+console.log(person1.name);
+var candidate = {
+    name: "Joe",
+    age: 25,
+    email: "joe@example.com",
+    phone: "(408)-123-4567"
+};
+console.log(candidate.phone);
