@@ -42,3 +42,14 @@ class Person4 {
 
 const person = new Person4('9990', 'John', 'Doe','bd');
 console.log(person.ssn)
+
+
+/* --------------------------- TypeScript readonly -------------------------- */
+class User {
+ 
+
+  constructor( readonly birthDate: Date) { }
+}
+
+let user = new User(new Date(1990, 12, 25));
+user.birthDate = new Date(1991, 12, 25); // Compile error
