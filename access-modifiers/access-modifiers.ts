@@ -16,8 +16,8 @@ class Person {
 const person1 = new Person('153-07-3130', 'John', 'Doe','bd');
 // console.log(person1.getFullName())
 let ss = person1.ssn = 'sssssssss'
-let firstName = person1.firstName = 'sssssssss' // is not support change and access
-let bd = person1.bd = 'sssssssss' // it's only not support modified but it allowed access outer scope
+// let firstName = person1.firstName = 'sssssssss' // !~is not support change and access
+// let bd = person1.bd = 'sssssssss' // ~it's only not support modified but it allowed access outer scope
 // console.log(person1.ssn)
 // console.log(person1.firstName)
 // console.log(person1.country)
@@ -40,8 +40,8 @@ class Person4 {
   }
 }
 
-const person = new Person4('9990', 'John', 'Doe','bd');
-console.log(person.ssn)
+// const person = new Person4('9990', 'John', 'Doe','bd');
+// console.log(person.ssn)
 
 
 /* --------------------------- TypeScript readonly -------------------------- */
@@ -52,4 +52,4 @@ class User {
 }
 
 let user = new User(new Date(1990, 12, 25));
-user.birthDate = new Date(1991, 12, 25); // Compile error
+// user.birthDate = new Date(1991, 12, 25); // Compile error

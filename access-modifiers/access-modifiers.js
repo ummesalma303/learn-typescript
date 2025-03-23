@@ -17,8 +17,8 @@ var Person = /** @class */ (function () {
 var person1 = new Person('153-07-3130', 'John', 'Doe', 'bd');
 // console.log(person1.getFullName())
 var ss = person1.ssn = 'sssssssss';
-var firstName = person1.firstName = 'sssssssss'; // is not support change and access
-var bd = person1.bd = 'sssssssss'; // it's only not support modified but it allowed access outer scope
+// let firstName = person1.firstName = 'sssssssss' // !~is not support change and access
+// let bd = person1.bd = 'sssssssss' // ~it's only not support modified but it allowed access outer scope
 // console.log(person1.ssn)
 // console.log(person1.firstName)
 // console.log(person1.country)
@@ -34,8 +34,8 @@ var Person4 = /** @class */ (function () {
     };
     return Person4;
 }());
-var person = new Person4('9990', 'John', 'Doe', 'bd');
-console.log(person.ssn);
+// const person = new Person4('9990', 'John', 'Doe','bd');
+// console.log(person.ssn)
 /* --------------------------- TypeScript readonly -------------------------- */
 var User = /** @class */ (function () {
     function User(birthDate) {
@@ -44,4 +44,4 @@ var User = /** @class */ (function () {
     return User;
 }());
 var user = new User(new Date(1990, 12, 25));
-user.birthDate = new Date(1991, 12, 25); // Compile error
+// user.birthDate = new Date(1991, 12, 25); // Compile error
